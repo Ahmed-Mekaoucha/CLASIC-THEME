@@ -1,11 +1,13 @@
 /*global $, document, window*/
 $(document).ready(function () {
     'use strict';
+    $('header').height($(window).height());
     $('.subscribe').delay(2000).fadeIn(1000);
     $(window).resize(function () {
         $('.slider').css({
             marginTop: ($(window).height() - $('.slider').height()) / 2
         });
+        $('header').height($(window).height());
     });
 
     $('header nav ul li a').on('click', function () {
@@ -55,6 +57,11 @@ $(document).ready(function () {
         });
     });
 
+    $('.loading').css({
+      width: $(window).width(),
+      height: $(window).height()
+    })
+
     $(window).on('scroll', function () {
       if ($(window).scrollTop() >= 1000) {
         $('.top').fadeIn(500);
@@ -92,15 +99,12 @@ $(document).ready(function () {
         });
       }
     });
-
     $('.subscribe').on('click', function (e) {
       $(this).fadeOut(500);
     });
-
     $('.subscribe section').on('click', function (e) {
       e.stopPropagation();
     });
-
     $('.subscribe section i').on('click', function () {
       $(this).parentsUntil('body').fadeOut(500);
     });
