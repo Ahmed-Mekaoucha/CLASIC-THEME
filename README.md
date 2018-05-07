@@ -1,4 +1,4 @@
-*Clasic Theme*
+**Clasic Theme**
 
 ```
 Clasic theme converted from psd to html & css & jQuery
@@ -7,4 +7,4 @@ Clasic theme converted from psd to html & css & jQuery
 - [x] CSS
 - [x] JQUERY
 
-*[VISIT THE EXAMPLE](http://gotravelgo.tk/clasic/)*
+**[VISIT THE EXAMPLE](http://gotravelgo.tk/clasic/)**
