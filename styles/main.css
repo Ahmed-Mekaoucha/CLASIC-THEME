@@ -188,18 +188,24 @@ header {
       background: transparent;
       color: rgba(236, 240, 241, 0.7); }
 
+.about .container section h2, .about .container section > section.our-team div:not(:first-of-type) h2, .testimonials .container h2, .projects .container h2 {
+  color: #363636;
+  letter-spacing: 0.1em;
+  margin: auto 0;
+  padding-left: 0;
+  position: relative; }
+  .about .container section h2::after, .about .container section > section.our-team div:not(:first-of-type) h2::after, .testimonials .container h2::after, .projects .container h2::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 3px;
+    background: #363636;
+    position: absolute;
+    bottom: -5px;
+    left: 0; }
+
 .about .container {
   padding: 41px 0; }
-  .about .container section h2 {
-    color: #363636;
-    letter-spacing: 0.1em; }
-    .about .container section h2::after {
-      content: '';
-      display: block;
-      width: 4.5%;
-      height: 3px;
-      background: #363636;
-      margin-top: 5px; }
   .about .container section > section {
     overflow: hidden; }
     .about .container section > section div {
@@ -226,13 +232,6 @@ header {
       .about .container section > section.our-team div:first-of-type {
         padding: 0 10px 10px 0;
         width: 33%; }
-        .about .container section > section.our-team div:first-of-type h2::after {
-          content: '';
-          display: block;
-          width: 13%;
-          height: 3px;
-          background: #363636;
-          margin-top: 5px; }
       .about .container section > section.our-team div:not(:first-of-type) h2 {
         -webkit-transition: top .7s ease-in-out .7s;
         -o-transition: top .7s ease-in-out .7s;
@@ -247,11 +246,6 @@ header {
         color: rgba(236, 240, 241, 0.7);
         z-index: 1; }
         .about .container section > section.our-team div:not(:first-of-type) h2::after {
-          content: '';
-          display: block;
-          width: 40%;
-          height: 3px;
-          margin-top: 5px;
           background: rgba(236, 240, 241, 0.7); }
       .about .container section > section.our-team div:not(:first-of-type) span {
         display: block;
@@ -293,20 +287,12 @@ header {
     z-index: 1;
     text-align: center; }
     .testimonials .container h2 {
-      color: rgba(236, 240, 241, 0.7);
-      position: relative;
-      width: 25%;
-      margin: 0 auto;
-      margin-bottom: 100px; }
+      display: inline-block;
+      margin-bottom: 70px;
+      color: rgba(236, 240, 241, 0.7); }
       .testimonials .container h2::after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 23.5%;
-        position: absolute;
-        bottom: -5px;
-        left: 10%;
-        background: rgba(236, 240, 241, 0.7); }
+        background: rgba(236, 240, 241, 0.7);
+        width: 3em; }
     .testimonials .container .bxslider li q {
       color: #FFF;
       line-height: 1.5; }
@@ -326,22 +312,10 @@ header {
     background: rgba(45, 52, 54, 0.7); }
 
 .projects .container {
-  padding: 20px 0; }
-  .projects .container h2 {
-    color: #363636;
-    position: relative; }
-    .projects .container h2:after {
-      content: '';
-      display: block;
-      background: #363636;
-      width: 4%;
-      height: 3px;
-      position: absolute;
-      bottom: -5px;
-      left: 0; }
+  padding: 40px 0; }
   .projects .container ul {
     list-style-type: none;
-    margin: 50px 0;
+    margin: 30px 0;
     padding: 0;
     overflow: hidden; }
     .projects .container ul li {
@@ -360,13 +334,11 @@ header {
     margin-bottom: 50px;
     overflow: hidden; }
     .projects .container .All div {
-      background-repeat: no-repeat;
-      background-size: cover;
       float: left;
       width: 32%;
       margin-right: 2%;
       margin-bottom: 20px;
-      height: 230px;
+      height: 330px;
       position: relative;
       overflow: hidden;
       -webkit-transition: all .5s ease-in-out;
@@ -432,65 +404,95 @@ header {
       .projects .container .All div:nth-of-type(3), .projects .container .All div:last-of-type {
         margin-right: 0; }
   .projects .container .All.all div:nth-of-type(1) {
-    background: url("images/projects/image001.png"); }
+    background: url("images/projects/image001.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.all div:nth-of-type(2) {
-    background: url("images/projects/image002.png"); }
+    background: url("images/projects/image002.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.all div:nth-of-type(3) {
-    background: url("images/projects/image003.png"); }
+    background: url("images/projects/image003.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.all div:nth-of-type(4) {
-    background: url("images/projects/image004.png"); }
+    background: url("images/projects/image004.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.all div:nth-of-type(5) {
-    background: url("images/projects/image005.png"); }
+    background: url("images/projects/image005.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.all div:nth-of-type(6) {
-    background: url("images/projects/image006.png"); }
+    background: url("images/projects/image006.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(1) {
-    background: url("images/projects/mobile/image001.png"); }
+    background: url("images/projects/mobile/image001.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(2) {
-    background: url("images/projects/mobile/image002.png"); }
+    background: url("images/projects/mobile/image002.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(3) {
-    background: url("images/projects/mobile/image003.png"); }
+    background: url("images/projects/mobile/image003.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(4) {
-    background: url("images/projects/mobile/image004.png"); }
+    background: url("images/projects/mobile/image004.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(5) {
-    background: url("images/projects/mobile/image005.png"); }
+    background: url("images/projects/mobile/image005.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.mobile div:nth-of-type(6) {
-    background: url("images/projects/mobile/image006.png"); }
+    background: url("images/projects/mobile/image006.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(1) {
-    background: url("images/projects/coffee/image001.png"); }
+    background: url("images/projects/coffee/image001.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(2) {
-    background: url("images/projects/coffee/image002.png"); }
+    background: url("images/projects/coffee/image002.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(3) {
-    background: url("images/projects/coffee/image003.png"); }
+    background: url("images/projects/coffee/image003.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(4) {
-    background: url("images/projects/coffee/image004.png"); }
+    background: url("images/projects/coffee/image004.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(5) {
-    background: url("images/projects/coffee/image005.png"); }
+    background: url("images/projects/coffee/image005.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.coffee div:nth-of-type(6) {
-    background: url("images/projects/coffee/image006.png"); }
+    background: url("images/projects/coffee/image006.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(1) {
-    background: url("images/projects/video/image001.png"); }
+    background: url("images/projects/video/image001.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(2) {
-    background: url("images/projects/video/image002.png"); }
+    background: url("images/projects/video/image002.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(3) {
-    background: url("images/projects/video/image003.png"); }
+    background: url("images/projects/video/image003.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(4) {
-    background: url("images/projects/video/image004.png"); }
+    background: url("images/projects/video/image004.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(5) {
-    background: url("images/projects/video/image005.png"); }
+    background: url("images/projects/video/image005.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.video div:nth-of-type(6) {
-    background: url("images/projects/video/image006.png"); }
+    background: url("images/projects/video/image006.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(1) {
-    background: url("images/projects/fashion/image001.png"); }
+    background: url("images/projects/fashion/image001.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(2) {
-    background: url("images/projects/fashion/image002.png"); }
+    background: url("images/projects/fashion/image002.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(3) {
-    background: url("images/projects/fashion/image003.png"); }
+    background: url("images/projects/fashion/image003.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(4) {
-    background: url("images/projects/fashion/image004.png"); }
+    background: url("images/projects/fashion/image004.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(5) {
-    background: url("images/projects/fashion/image005.png"); }
+    background: url("images/projects/fashion/image005.png") no-repeat;
+    background-size: 100%; }
   .projects .container .All.fashion div:nth-of-type(6) {
-    background: url("images/projects/fashion/image006.png"); }
+    background: url("images/projects/fashion/image006.png") no-repeat;
+    background-size: 100%; }
 
 footer {
   background: #363636;

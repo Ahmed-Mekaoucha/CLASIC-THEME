@@ -218,21 +218,29 @@ header {
   }
 }
 
+%h2 {
+  color: $dark;
+  letter-spacing: 0.1em;
+  margin: auto 0;
+  padding-left: 0;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 3px;
+    background: $dark;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+}
 .about {
   .container {
     padding: 41px 0;
     section {
       h2 {
-        color: $dark;
-        letter-spacing: 0.1em;
-        &::after {
-          content: '';
-          display: block;
-          width: 4.5%;
-          height: 3px;
-          background: $dark;
-          margin-top: 5px;
-        }
+        @extend %h2;
       }
       > section {
         overflow: hidden;
@@ -266,14 +274,6 @@ header {
             &:first-of-type {
               padding: 0 10px 10px 0;
               width: 33%;
-              h2::after {
-                content: '';
-                display: block;
-                width: 13%;
-                height: 3px;
-                background: $dark;
-                margin-top: 5px;
-              }
             }
             &:not(:first-of-type) {
               h2 {
@@ -289,12 +289,8 @@ header {
                 white-space: nowrap;
                 color: $white;
                 z-index: 1;
+                @extend %h2;
                 &::after {
-                  content: '';
-                  display: block;
-                  width: 40%;
-                  height: 3px;
-                  margin-top: 5px;
                   background: $white;
                 }
               }
@@ -343,20 +339,13 @@ header {
     z-index: 1;
     text-align: center;
     h2 {
+      @extend %h2;
+      display: inline-block;
+      margin-bottom: 70px;
       color: $white;
-      position: relative;
-      width: 25%;
-      margin: 0 auto;
-      margin-bottom: 100px;
       &::after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 23.5%;
-        position: absolute;
-        bottom: -5px;
-        left: 10%;
         background: $white;
+        width: 3em;
       }
     }
     .bxslider {
@@ -389,24 +378,13 @@ header {
 
 .projects {
   .container {
-    padding: 20px 0;
+    padding: 40px 0;
     h2 {
-      color: $dark;
-      position: relative;
-      &:after {
-        content: '';
-        display: block;
-        background: $dark;
-        width: 4%;
-        height: 3px;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-      }
+      @extend %h2;
     }
     ul {
       list-style-type: none;
-      margin: 50px 0;
+      margin: 30px 0;
       padding: 0;
       overflow: hidden;
       li {
@@ -428,13 +406,11 @@ header {
       margin-bottom: 50px;
       overflow: hidden;
       div {
-        background-repeat: no-repeat;
-        background-size: cover;
         float: left;
         width: 32%;
         margin-right: 2%;
         margin-bottom: 20px;
-        height: 230px;
+        height: 330px;
         position: relative;
         overflow: hidden;
         -webkit-transition: all .5s ease-in-out;
@@ -508,7 +484,8 @@ header {
       div {
         @for $i from 1 through 6 {
           &:nth-of-type(#{$i}) {
-            background: url('images/projects/image00#{$i}.png');
+            background: url('images/projects/image00#{$i}.png') no-repeat;
+            background-size: 100%;
           }
         }
       }
@@ -517,7 +494,8 @@ header {
       div {
         @for $i from 1 through 6 {
           &:nth-of-type(#{$i}) {
-            background: url('images/projects/mobile/image00#{$i}.png');
+            background: url('images/projects/mobile/image00#{$i}.png') no-repeat;
+            background-size: 100%;
           }
         }
       }
@@ -526,7 +504,8 @@ header {
       div {
         @for $i from 1 through 6 {
           &:nth-of-type(#{$i}) {
-            background: url('images/projects/coffee/image00#{$i}.png');
+            background: url('images/projects/coffee/image00#{$i}.png') no-repeat;
+            background-size: 100%;
           }
         }
       }
@@ -535,7 +514,8 @@ header {
       div {
         @for $i from 1 through 6 {
           &:nth-of-type(#{$i}) {
-            background: url('images/projects/video/image00#{$i}.png');
+            background: url('images/projects/video/image00#{$i}.png') no-repeat;
+            background-size: 100%;
           }
         }
       }
@@ -544,7 +524,8 @@ header {
       div {
         @for $i from 1 through 6 {
           &:nth-of-type(#{$i}) {
-            background: url('images/projects/fashion/image00#{$i}.png');
+            background: url('images/projects/fashion/image00#{$i}.png') no-repeat;
+            background-size: 100%;
           }
         }
       }
