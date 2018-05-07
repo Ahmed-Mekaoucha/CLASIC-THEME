@@ -237,17 +237,18 @@ header {
 }
 .about {
   .container {
-    padding: 41px 0;
+    padding: 80px 0;
     section {
       h2 {
         @extend %h2;
+        margin-bottom: 50px;
       }
       > section {
         overflow: hidden;
         div {
           float: left;
-          width: calc(100% / 3);
-          padding: 10px 10px 10px 7%;
+          width: calc(98% / 3);
+          padding: 10px 0px 10px 6%;
           position: relative;
           h3 {
             color: $dark;
@@ -261,6 +262,9 @@ header {
             color: $green;
             top: 20%;
             left: 0;
+          }
+          &.sdav {
+            margin-right: 1%;
           }
         }
         &.our-team {
@@ -378,7 +382,7 @@ header {
 
 .projects {
   .container {
-    padding: 40px 0;
+    padding: 85px 0;
     h2 {
       @extend %h2;
     }
@@ -403,13 +407,12 @@ header {
       }
     }
     .All {
-      margin-bottom: 50px;
       overflow: hidden;
       div {
         float: left;
         width: 32%;
         margin-right: 2%;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         height: 305px;
         position: relative;
         overflow: hidden;

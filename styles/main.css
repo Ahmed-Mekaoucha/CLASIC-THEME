@@ -205,13 +205,15 @@ header {
     left: 0; }
 
 .about .container {
-  padding: 41px 0; }
+  padding: 80px 0; }
+  .about .container section h2 {
+    margin-bottom: 50px; }
   .about .container section > section {
     overflow: hidden; }
     .about .container section > section div {
       float: left;
-      width: calc(100% / 3);
-      padding: 10px 10px 10px 7%;
+      width: calc(98% / 3);
+      padding: 10px 0px 10px 6%;
       position: relative; }
       .about .container section > section div h3 {
         color: #363636; }
@@ -223,6 +225,8 @@ header {
         color: #3DBC99;
         top: 20%;
         left: 0; }
+      .about .container section > section div.sdav {
+        margin-right: 1%; }
     .about .container section > section.our-team div {
       width: calc(63% / 4);
       padding: 0;
@@ -312,7 +316,7 @@ header {
     background: rgba(45, 52, 54, 0.7); }
 
 .projects .container {
-  padding: 40px 0; }
+  padding: 85px 0; }
   .projects .container ul {
     list-style-type: none;
     margin: 30px 0;
@@ -331,13 +335,12 @@ header {
       .projects .container ul li:hover, .projects .container ul li.active {
         background: #3DBC99; }
   .projects .container .All {
-    margin-bottom: 50px;
     overflow: hidden; }
     .projects .container .All div {
       float: left;
       width: 32%;
       margin-right: 2%;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       height: 305px;
       position: relative;
       overflow: hidden;
