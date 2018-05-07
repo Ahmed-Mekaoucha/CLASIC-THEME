@@ -74,37 +74,6 @@ p, a, li, button, q, h1, h2, h3 {
         margin-top: 20px;
         cursor: pointer; }
 
-.loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #363636;
-  color: rgba(236, 240, 241, 0.7);
-  z-index: 10; }
-  .loading i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: calc(-160px / 2) auto auto calc(-160px / 2);
-    -webkit-animation: loading 1s linear infinite;
-    animation: loading 1s linear infinite; }
-
-@-webkit-keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-@keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
 .top {
   display: none;
   position: fixed;
