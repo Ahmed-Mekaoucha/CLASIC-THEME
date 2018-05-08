@@ -10,7 +10,7 @@ p, a, li, button, q, h1, h2, h3 {
 :focus {
   outline: none;
 }
-
+/*Start Styling The Subscribe Popup*/
 .subscribe {
   background: rgba(99, 110, 114, 0.7);
   width: 100%;
@@ -95,7 +95,8 @@ p, a, li, button, q, h1, h2, h3 {
   margin-top: 20px;
   cursor: pointer;
 }
-
+/*End Styling The Subscribe Popup*/
+/*Start Styling The Go to top Button*/
 .top {
   display: none;
   position: fixed;
@@ -115,7 +116,8 @@ p, a, li, button, q, h1, h2, h3 {
 .top:hover {
   background: #3DBC99;
 }
-
+/*End Styling The Go to top Button*/
+/*Start Styling The Header*/
 header {
   background: #000 url("../images/head-bg.jpg");
   background-size: cover;
@@ -245,7 +247,8 @@ header .darkness button {
   background: transparent;
   color: rgba(236, 240, 241, 0.7);
 }
-
+/*End Styling The Header*/
+/*Start Styling The About Section*/
 .about .container section h2, .about .container section > section.our-team div:not(:first-of-type) h2, .testimonials .container h2, .projects .container h2 {
   color: #363636;
   letter-spacing: 0.1em;
@@ -373,7 +376,8 @@ header .darkness button {
   height: 1px;
   border: none;
 }
-
+/*End Styling The About Sectin*/
+/*Start Styling The Testimonials Section*/
 .testimonials {
   background: #363636 url("images/bgtest.png");
   background-size: cover;
@@ -423,7 +427,8 @@ header .darkness button {
   z-index: 0;
   background: rgba(45, 52, 54, 0.7);
 }
-
+/*End Styling The Testimonials section*/
+/*Start Styling The Projects Section*/
 .projects .container {
   padding: 85px 0;
 }
@@ -696,7 +701,8 @@ header .darkness button {
   background: url("images/projects/fashion/image006.png") no-repeat;
   background-size: 100%;
 }
-
+/*End Styling The Projects section*/
+/*Start Styling The footer*/
 footer {
   background: #363636;
   padding: 50px 0;
@@ -862,7 +868,8 @@ footer .container > p:hover {
 footer .container > p:hover a {
   color: #3DBC99;
 }
-
+/*End Styling The footer*/
+/*Start Global Framework*/
 .clea-fix {
   clear: both;
 }
@@ -871,3 +878,5 @@ footer .container > p:hover a {
   width: 70%;
   margin: auto;
 }
+/*End Frame Work*/
+/*End*/

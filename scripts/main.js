@@ -1,21 +1,25 @@
 /*global $, document, window*/
 $(document).ready(function () {
     'use strict';
+    // Set Up The Header height
     $('header').height($(window).height());
+    // Set Up The Time Of The Suscribe Popup
     $('.subscribe').delay(2000).fadeIn(1000);
+    // Set Up The Height Of The Sections Of The Website
     $('nav ul li a').each(function () {
-      $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
+        $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
     });
+    // Set Up The Height Of The Header & Section & The psitions Of The Header children On Resize
     $(window).resize(function () {
         $('.slider').css({
             marginTop: ($(window).height() - $('.slider').height()) / 2
         });
         $('header').height($(window).height());
         $('nav ul li a').each(function () {
-          $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
+            $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
         });
     });
-
+    // Scrollig to The Areas Of The Menu List
     $('header nav ul li a').on('click', function () {
         $('html, body').animate({
             scrollTop: $('.' + $(this).data('content')).offset().top - $('.fixed-header').height() + 5
@@ -26,7 +30,7 @@ $(document).ready(function () {
             }, 1000);
         }
     });
-
+    // Bx Slider Bluguin SetUp
     $('.bxslider').bxSlider({
         auto: true,
         speed: 700,
@@ -34,11 +38,11 @@ $(document).ready(function () {
         randomStart: true,
         pager: true
     });
-
+    // Set Up The Position Of The Slider In The Header
     $('.slider').css({
         marginTop: ($(window).height() - $('.slider').height()) / 2
     });
-
+    // Set Up & Fire The Nice scroll Bluguin
     $("body").niceScroll({
         cursorcolor: "#3CBC99",
         cursorwidth: "10px",
@@ -48,12 +52,13 @@ $(document).ready(function () {
         scrollspeed: 100,
         mousescrollstep: 10
     });
-
+    // Ad Class Active To The Clicked Li In The Projects Section
+    // Change The Pictures depend on Category
     $('.projects .container ul li').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('.All').attr('class', 'All ' + $(this).text().toLowerCase());
     });
-
+    // Add Clas To The Navigation Elements After Scrolling To Their Sections
     $(window).on('scroll', function () {
         var fixheadheight = $('.fixed-header').innerHeight();
         $('.area').each(function () {
@@ -62,72 +67,71 @@ $(document).ready(function () {
             }
         });
     });
-
+    // Show & Hide Go To Top Button Depend On Scrolling
     $(window).on('scroll', function () {
-      if ($(window).scrollTop() >= 1000) {
-        $('.top').fadeIn(500);
-      } else {
-        $('.top').fadeOut(500);
-      }
+        if ($(window).scrollTop() >= 1000) {
+            $('.top').fadeIn(500);
+        } else {
+            $('.top').fadeOut(500);
+        }
     });
+    // Set Up Go to top Button
     $('.top').on('click', function () {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 1000);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
     });
-
-
+    // Make Th Label Of The Input Look From Place Holder To Label On Focus
     $('.subscribe section form div input').on('focus', function () {
         $(this).next('label').animate({
-          top: '-25px',
-          fontSize: '17px',
-          color: '#FFF'
+            top: '-25px',
+            fontSize: '17px',
+            color: '#FFF'
         }, 300);
     });
-
+    // Make The Label Of The Input Look Like Place Holder On Blur If The Input Is Empty
     $('.subscribe section form div input').on('blur', function () {
-      if ($(this).val() === '') {
-        $(this).next('label').animate({
-          top: '10px',
-          fontSize: '21px',
-          color: 'rgba(99, 110, 114,1.0)'
-        });
-      } else {
-        $(this).next('label').animate({
-          top: '-25px',
-          fontSize: '17px',
-          color: '#FFF'
-        });
-      }
+        if ($(this).val() === '') {
+            $(this).next('label').animate({
+                top: '10px',
+                fontSize: '21px',
+                color: 'rgba(99, 110, 114,1.0)'
+            });
+        } else {
+            $(this).next('label').animate({
+                top: '-25px',
+                fontSize: '17px',
+                color: '#FFF'
+            });
+        }
     });
-    $('.subscribe').on('click', function (e) {
-      $(this).fadeOut(500);
-    });
-    $('.subscribe section').on('click', function (e) {
-      e.stopPropagation();
-    });
-    $('.subscribe section i').on('click', function () {
-      $(this).parentsUntil('body').fadeOut(500);
-    });
-
-    $(document).on('keydown', function (event) {
-      var keycode = event.keycode || event.which;
-      if (keycode === 27) {
+    // Hide The Subscribe Popup Hide After Click On It Or The X Icon
+    $('.subscribe, .subscribe section i').on('click', function () {
         $('.subscribe').fadeOut(500);
-      }
     });
-
+    // Stop Propagation In The Div In The Popup
+    $('.subscribe section').on('click', function (e) {
+        e.stopPropagation();
+    });
+    // Hide The Subscribe Popup After Clicking On <<Esc>> Key
+    $(document).on('keydown', function (event) {
+        var keycode = event.keycode || event.which;
+        if (keycode === 27) {
+            $('.subscribe').fadeOut(500);
+        }
+    });
+    // Change The Backgroun & add Bottom Border To The Header & Make It Fixed After Scrollin
     $(window).on('scroll', function () {
-      if ($(this).scrollTop() > 700) {
-        $('.fixed-header').css({
-          backgroundColor: 'rgba(54, 54, 54, .7)',
-          borderBottom: '3px solid #3DBC99'
-        });
-      } else {
-        $('.fixed-header').css({
-          backgroundColor: 'transparent',
-          borderBottom: 'none'
-        });
-      }
+        if ($(this).scrollTop() > 700) {
+            $('.fixed-header').css({
+                backgroundColor: 'rgba(54, 54, 54, .7)',
+                borderBottom: '3px solid #3DBC99'
+            });
+        } else {
+            $('.fixed-header').css({
+                backgroundColor: 'transparent',
+                borderBottom: 'none'
+            });
+        }
     });
 });
