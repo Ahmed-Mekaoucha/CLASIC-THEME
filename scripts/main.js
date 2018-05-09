@@ -1,22 +1,12 @@
 /*global $, document, window*/
 $(document).ready(function () {
     'use strict';
-    // Set Up The Header height
-    $('header').height($(window).height());
     // Set Up The Time Of The Suscribe Popup
     $('.subscribe').delay(2000).fadeIn(1000);
-    // Set Up The Height Of The Sections Of The Website
-    $('nav ul li a').each(function () {
-        $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
-    });
     // Set Up The Height Of The Header & Section & The psitions Of The Header children On Resize
     $(window).resize(function () {
         $('.slider').css({
             marginTop: ($(window).height() - $('.slider').height()) / 2
-        });
-        $('header').height($(window).height());
-        $('nav ul li a').each(function () {
-            $('#' + $(this).data('content')).not('#testimonials').height($(window).height());
         });
     });
     // Scrollig to The Areas Of The Menu List

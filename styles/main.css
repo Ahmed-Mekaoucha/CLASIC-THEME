@@ -123,6 +123,7 @@ header {
   background-size: cover;
   padding: 15px 0;
   position: relative;
+  height: 100vh;
 }
 
 header .fixed-header {
